@@ -34,6 +34,10 @@ void CSkyBox::SetSkyBoxType(SKYBOX_TYPE _Type)
 
 void CSkyBox::SetSkyBoxTexture(Ptr<ATexture> _Tex)
 {
+	wstring MtrlName = L"SkyBoxMtrl";
+	wstring ShaderName = L"SkyBoxShader";
+	SetMaterial(AssetMgr::GetInst()->Find<AMaterial>(MtrlName), 0);
+
 	if (_Tex->IsCubeMap())	
 		m_SkyCubeTex = _Tex;
 	else
@@ -42,6 +46,7 @@ void CSkyBox::SetSkyBoxTexture(Ptr<ATexture> _Tex)
 
 void CSkyBox::FinalTick()
 {
+	int a = 0;
 }
 
 void CSkyBox::Render()

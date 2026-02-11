@@ -11,6 +11,7 @@ private:
 	vector<Ptr<AMaterial>>	m_vecMtrl;
 
 public:
+	Ptr<AMesh> GetMesh() const { return m_Mesh; };
 	static AMeshData* LoadFromFBX(const wstring& _RelativePath);
 
 	GameObject* Instantiate();

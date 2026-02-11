@@ -84,13 +84,13 @@ void CreateTestLevel()
 	pObject->AddComponent(new CTransform);
 	pObject->AddComponent(new CLight3D);
 
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 700.f, 0.f));
+	pObject->Transform()->SetRelativePos(Vec3(0.f, 70.f, 0.f));
 	pObject->Transform()->SetRelativeRot(Vec3(0, 0.f, 0.f));
 
 	pObject->Light3D()->SetLightType(LIGHT_TYPE::POINT);
 	pObject->Light3D()->SetRadius(1000.f);
 
-	pObject->Light3D()->SetLightColor(Vec3(1.f, 1.f, 1.f));
+	pObject->Light3D()->SetLightColor(Vec3(1.f, 0.8f, 0.7f));
 	pObject->Light3D()->SetAmbient(Vec3(0.15f, 0.15f, 0.15f));
 
 	pLevel->AddObject(0, pObject.Get());
@@ -105,8 +105,8 @@ void CreateTestLevel()
 	pObject->AddComponent(new CMeshRender);
 	pObject->AddComponent(new CPlayerScript);
 
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 0.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(1000.f, 1000.f, 200.f));
+	pObject->Transform()->SetRelativePos(Vec3(0.f, 0.f, 224.f));
+	pObject->Transform()->SetRelativeScale(Vec3(1300.f, 1300.f, 200.f));
 	pObject->Transform()->SetRelativeRot(Vec3(XM_PI / 2.f, 0.f, 0.f));
 
 	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
@@ -118,85 +118,6 @@ void CreateTestLevel()
 
 	pLevel->AddObject(3, pObject.Get());
 
-	// Player 오브젝트
-	pObject = new GameObject;
-	pObject->SetName(L"Player2");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-	pObject->AddComponent(new CPlayerScript);
-
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 550.f, 750.f));
-	pObject->Transform()->SetRelativeScale(Vec3(1000.f, 1000.f, 200.f));
-	pObject->Transform()->SetRelativeRot(Vec3(0, 0.f, 0.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"RectMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Player 오브젝트
-	pObject = new GameObject;
-	pObject->SetName(L"Player3");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-	pObject->AddComponent(new CPlayerScript);
-
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 550.f, -750.f));
-	pObject->Transform()->SetRelativeScale(Vec3(1000.f, 1000.f, 200.f));
-	pObject->Transform()->SetRelativeRot(Vec3(XM_PI, 0.f, 0.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"RectMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Player 오브젝트
-	pObject = new GameObject;
-	pObject->SetName(L"Player4");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-	pObject->AddComponent(new CPlayerScript);
-
-	pObject->Transform()->SetRelativePos(Vec3(750.f, 550.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(1000.f, 1000.f, 200.f));
-	pObject->Transform()->SetRelativeRot(Vec3(0, XM_PI / 2, 0.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"RectMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Player 오브젝트
-	pObject = new GameObject;
-	pObject->SetName(L"Player4");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-	pObject->AddComponent(new CPlayerScript);
-
-	pObject->Transform()->SetRelativePos(Vec3(-750.f, 550.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(1000.f, 1000.f, 200.f));
-	pObject->Transform()->SetRelativeRot(Vec3(0, -XM_PI / 2, 0.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"RectMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
 }
 
 	//// Decal 오브젝트
@@ -216,114 +137,6 @@ void CreateTestLevel()
 
 	//pLevel->AddObject(3, pDecalObj.Get());
 
-
-	// Sphere Object
-	pObject = new GameObject;
-	pObject->SetName(L"Sphere");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 200.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"SphereMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Sphere Object
-	pObject = new GameObject;
-	pObject->SetName(L"Sphere2");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 1200.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"SphereMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Sphere Object
-	pObject = new GameObject;
-	pObject->SetName(L"Sphere3");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-
-	pObject->Transform()->SetRelativePos(Vec3(500.f, 700.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"SphereMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Sphere Object
-	pObject = new GameObject;
-	pObject->SetName(L"Sphere4");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-
-	pObject->Transform()->SetRelativePos(Vec3(-500.f, 700.f, 0.f));
-	pObject->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"SphereMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Sphere Object
-	pObject = new GameObject;
-	pObject->SetName(L"Sphere5");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 700.f, 500.f));
-	pObject->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"SphereMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
-
-	// Sphere Object
-	pObject = new GameObject;
-	pObject->SetName(L"Sphere6");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 700.f, -500.f));
-	pObject->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"SphereMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
 	//// Tessellation Test Object
 	//Ptr<AGraphicShader> pTessTestShader = new AGraphicShader;
 	//pTessTestShader->CreateVertexShader(L"HLSL\\TessTest.fx", "VS_TessTest");
@@ -386,17 +199,59 @@ void CreateTestLevel()
 	// FBX Loading
 	// ============	
 	{
-		//Ptr<AMeshData> pMeshData = nullptr;
-		//GameObject* pObj = nullptr;
+		Ptr<AMeshData> pMeshData = nullptr;
+		GameObject* pObj = nullptr;
 
-		//pMeshData = AssetMgr::GetInst()->LoadFBX(L"FBX\\Monster.fbx");
+		pMeshData = AssetMgr::GetInst()->LoadFBX(L"FBX\\Crow.fbx");
 
-		//pObj = pMeshData->Instantiate();
-		//pObj->SetName(L"Monster");
-		//pObj->Transform()->SetRelativePos(Vec3(0.f, 0.f, 0.f));
-		//pObj->Transform()->SetRelativeScale(Vec3(10.f, 10.f, 10.f));
-		//pObj->GetRenderCom()->SetFrustumCulling(false);
-		//		
-		//pLevel->AddObject(0, pObj, false);
+		pObj = pMeshData->Instantiate();
+		pObj->SetName(L"Crow");
+		pObj->Transform()->SetRelativePos(Vec3(0.f, 0.f, 300.f));
+		pObj->Transform()->SetRelativeScale(Vec3(200.f, 200.f, 200.f));
+		pObj->GetRenderCom()->SetFrustumCulling(false);
+				
+		pLevel->AddObject(0, pObj, false);
+
+		pMeshData = AssetMgr::GetInst()->LoadFBX(L"FBX\\CampFire.fbx");
+
+		pObj = pMeshData->Instantiate();
+		pObj->SetName(L"CampFire");
+		pObj->Transform()->SetRelativePos(Vec3(0.f, 0.f, 0.f));
+		pObj->Transform()->SetRelativeScale(Vec3(80.f, 80.f, 80.f));
+		pObj->Transform()->SetRelativeRot(Vec3(0.f, XM_PI / 2.5f, 0.f));
+		pObj->GetRenderCom()->SetFrustumCulling(false);
+
+		pLevel->AddObject(0, pObj, false);
+
+		pMeshData = AssetMgr::GetInst()->LoadFBX(L"FBX\\RealCrow.fbx");
+
+		pObj = pMeshData->Instantiate();
+		pObj->SetName(L"RealCrow");
+		pObj->Transform()->SetRelativePos(Vec3(-174.f, -269.f, 193.f));
+		pObj->Transform()->SetRelativeScale(Vec3(120.f, 120.f, 120.f));
+		pObj->Transform()->SetRelativeRot(Vec3(0.f, - XM_PI / 4, 0.f));
+		pObj->GetRenderCom()->SetFrustumCulling(false);
+
+		pLevel->AddObject(0, pObj, false);
+
+		pObj = pMeshData->Instantiate();
+		pObj->SetName(L"RealCrow2");
+		pObj->Transform()->SetRelativePos(Vec3(174.f, -172.f, 247.f));
+		pObj->Transform()->SetRelativeScale(Vec3(120.f, 120.f, 120.f));
+		pObj->Transform()->SetRelativeRot(Vec3(0.f, XM_PI / 4, 0.f));
+		pObj->GetRenderCom()->SetFrustumCulling(false);
+
+
+		pMeshData = AssetMgr::GetInst()->LoadFBX(L"FBX\\Stone01.fbx");
+		pLevel->AddObject(0, pObj, false);
+
+		pObj = pMeshData->Instantiate();
+		pObj->SetName(L"Stone01");
+		pObj->Transform()->SetRelativePos(Vec3(-265.f, -79.f, 1329.f));
+		pObj->Transform()->SetRelativeScale(Vec3(5.f, 6.f, 5.f));
+		pObj->Transform()->SetRelativeRot(Vec3(0.f, XM_PI / 20    , 0.f));
+		pObj->GetRenderCom()->SetFrustumCulling(false);
+
+		pLevel->AddObject(0, pObj, false);
 	}
 }

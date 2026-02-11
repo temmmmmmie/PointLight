@@ -109,7 +109,10 @@ void CRenderComponent::Render_ShadowMap(Ptr<AMaterial> _ShadowMapMtrl)
 {
 	_ShadowMapMtrl->Binding();
 
-	m_Mesh->Render(0);
+	for (int i = 0; i < GetMesh()->GetSubsetCount(); ++i)
+	{
+		GetMesh()->Render(i);
+	}
 }
 
 void CRenderComponent::SaveToLevelFile(FILE* _File)

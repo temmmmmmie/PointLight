@@ -48,8 +48,8 @@ void CLight3D::FinalTick()
 	}
 	else if (m_Info.Type == LIGHT_TYPE::POINT)
 	{
-		DrawDebugSphere(Transform()->GetWorldPos()
-			, m_Info.Radius, Vec4(0.2f, 0.8f, 0.2f, 1.f), true, 0.f);
+		//DrawDebugSphere(Transform()->GetWorldPos()
+			//, m_Info.Radius, Vec4(0.2f, 0.8f, 0.2f, 1.f), true, 0.f);
 	}	
 
 	// ±¤¿ø µî·Ï

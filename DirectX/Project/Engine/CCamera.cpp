@@ -116,9 +116,6 @@ void CCamera::FinalTick()
 
 	// Ray °è»ê
 	CalcRay();
-	if (this->GetOwner()->GetName() == L"Light Camera") {
-		DrawDebugCube(Transform()->GetWorldPos(), Vec3(10.f, 10.f, 200.f), Transform()->GetRelativeRot(), Vec4(0.2f, 0.8f, 0.2f, 1.f), false, 0.f);
-	}
 }
 
 void CCamera::Render()
