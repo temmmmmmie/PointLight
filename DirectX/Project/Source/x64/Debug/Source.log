@@ -1,0 +1,27 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(524,5): warning MSB8004: Output 디렉터리가 슬래시로 끝나지 않습니다. Output 디렉터리의 적절한 평가를 허용하는 데 필요하므로 이 빌드 인스턴스에서 슬래시를 추가합니다.
+  파일 삭제 - C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\Source\ScriptMgr.h
+  파일 삭제 - C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\Source\Scripts\CCameraMoveScript.h
+  파일 삭제 - C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\Source\Scripts\CMissileScript.h
+  파일 삭제 - C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\Source\Scripts\CMonsterScript.h
+  파일 삭제 - C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\Source\Scripts\CPlayerScript.h
+  .\Project\Source\ScriptMgr.h
+  .\Project\Source\Scripts\CCameraMoveScript.h
+  .\Project\Source\Scripts\CMissileScript.h
+  .\Project\Source\Scripts\CMonsterScript.h
+  .\Project\Source\Scripts\CPlayerScript.h
+  5개 파일이 복사되었습니다.
+  pch.cpp
+C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\FBXLoader\fbxsdk.h(118,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+  ScriptMgr.cpp
+  CCameraMoveScript.cpp
+  CMissileScript.cpp
+  CMonsterScript.cpp
+  CPlayerScript.cpp
+C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Include\Engine\RenderMgr.h(49,108): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Scripts/CPlayerScript.cpp'을(를) 컴파일하는 중)
+  
+  Source.cpp
+  코드를 생성하고 있습니다...
+  Source.vcxproj -> C:\Users\Jasmine\Desktop\PointLight\DirectX\External\Library\Source\Source_D.lib
