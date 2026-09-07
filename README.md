@@ -13,4 +13,6 @@ PointLight\DirectX\External\Library\FBXLoader\x64\debug\libfbxsdk-md.lib 파일�
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-https://app.notion.com/p/HLSL-2c1d76ce57dc80a4a909f92216595ba7
+실행영상 : https://www.youtube.com/watch?v=doAe56rWVXE
+
+상세설명 : https://app.notion.com/p/HLSL-2c1d76ce57dc80a4a909f92216595ba7
