@@ -99,24 +99,7 @@ void CreateTestLevel()
 
 	{
 	// Player 오브젝트
-	pObject = new GameObject;
-	pObject->SetName(L"Player");
-	pObject->AddComponent(new CTransform);
-	pObject->AddComponent(new CMeshRender);
-	pObject->AddComponent(new CPlayerScript);
 
-	pObject->Transform()->SetRelativePos(Vec3(0.f, 0.f, 224.f));
-	pObject->Transform()->SetRelativeScale(Vec3(1300.f, 1300.f, 200.f));
-	pObject->Transform()->SetRelativeRot(Vec3(XM_PI / 2.f, 0.f, 0.f));
-
-	LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_normal.TGA");
-
-	pObject->MeshRender()->SetMesh(FIND(AMesh, L"RectMesh"));
-	pObject->MeshRender()->SetMaterial(FIND(AMaterial, L"Std3D_DeferredMtrl"), 0);
-	pObject->MeshRender()->GetMaterial(0)->SetTexture(TEX_0, LOAD(ATexture, L"Texture\\LandScapeTexture\\gl1_ground_II_albedo.TGA"));
-	pObject->MeshRender()->SetBoundingBox(750.f);
-
-	pLevel->AddObject(3, pObject.Get());
 
 }
 
